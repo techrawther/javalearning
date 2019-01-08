@@ -1,9 +1,15 @@
 pipeline {
     agent any
+
+    tools{
+        maven "maven.3.6.0"
+        jdk "JDK11"
+    }
+
     stages {
         stage('Build') {
             steps {
-                sh 'echo " In am doing build"'
+                sh 'cd LearJava && mvn clean install'
             }
         }
         stage('Test') {
