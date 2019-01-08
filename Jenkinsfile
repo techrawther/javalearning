@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cd LearJava && mvn clean install'
+                sh 'cd LearnJava && mvn clean install'
             }
         }
         stage('Test') {
